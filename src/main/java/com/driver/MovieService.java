@@ -29,11 +29,11 @@ public class MovieService {
     List<String> getListOfMovies(String directorName) {
         return movieRepository.getListOfMovies(directorName);
     }
-   List<Movie> getAllMovie(){
+   List<String> getAllMovie(){
        HashMap<String,Movie>temp=movieRepository.getAllMovie();
-       List<Movie>allMovies=new ArrayList<>();
+       List<String>allMovies=new ArrayList<>();
        for(String x:temp.keySet()){
-           allMovies.add(temp.get(x));
+           allMovies.add(x);
        }
        return allMovies;
    }
